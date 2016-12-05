@@ -1,0 +1,30 @@
+﻿<Application
+    x:Class="BikeSharing.Clients.CogServicesKiosk.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="using:BikeSharing.Clients.CogServicesKiosk.Converters"
+    RequestedTheme="Light">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!-- Colors -->
+            <SolidColorBrush  x:Key="WhiteColor">#ffffff</SolidColorBrush >
+            <SolidColorBrush  x:Key="TransparentWhiteColor">#BFffffff</SolidColorBrush >
+            <SolidColorBrush  x:Key="BlueColor">#3063f5</SolidColorBrush >
+            <SolidColorBrush  x:Key="TransparentBlueColor">#BF3063f5</SolidColorBrush >
+            <SolidColorBrush  x:Key="BrightYellowColor">#ffed00</SolidColorBrush >
+            <SolidColorBrush  x:Key="GrayColor">#484f63</SolidColorBrush >
+            <SolidColorBrush  x:Key="ErrorColor">#ff5252</SolidColorBrush >
+            <SolidColorBrush  x:Key="BackgroundGrayColor">#f4f6fa</SolidColorBrush >
+            <SolidColorBrush  x:Key="ToolbarBlueColor">#3063f5</SolidColorBrush >
+            <SolidColorBrush  x:Key="OrangeColor">#ff5e4d</SolidColorBrush >
+            <SolidColorBrush  x:Key="ProfileGrayColor">#afb3be</SolidColorBrush >
+            <SolidColorBrush  x:Key="BlackColor">#000000</SolidColorBrush >
+            <SolidColorBrush  x:Key="GreenColor">#0aca91</SolidColorBrush >
+
+            <!--Converters-->
+            <converters:ValueToVisibilityConverter x:Key="visConverter" />            
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
