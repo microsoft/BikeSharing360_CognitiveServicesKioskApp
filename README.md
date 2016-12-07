@@ -1,9 +1,23 @@
-# BikeSharing360_CognitiveServicesKioskApp
-BikeSharing360 Cognitive Services Kiosk Demo App
+# BikeSharing360 Modern Kiosk with Cognitive Services
 
+During Connect(); //2016 we showcased many technologies available to you as a developer across Azure, Office, Windows, Visual Studio and Visual Studio Team Services. We’ve also heard from you that you love to have real-world applications through which you can directly experience what’s possible using those technologies. This year, then, we built out a full bikerider scenario for our Connect(); //2016 demos and are delighted to share all the source code with you.
 
+**Note:** This document is about the **Kiosk app** only.
 
-	1. Create an Azure account if you don't already have one
+This kiosk app leveraged Cognitive Services to enable customers to interact with the kiosk through face detection, face recognition, voice verification, text-to-speech, speech-to-text, language understanding, and emotion detection, which allowed them to complete a transaction without the need for traditional input or touch or even pulling out your wallet.  
+
+<img src="Images/hero_image.png" alt="BikeRider" Width="800" />
+
+## Requirements
+* Windows 10
+* [Visual Studio __2015__](https://www.visualstudio.com/en-us/products/vs-2015-product-editions.aspx) Update 3 (14.0 or higher) to compile C# 6 language features (or Visual Studio MacOS)
+* Microsoft Azure subscription
+
+## Setup
+
+**Download** or clone the repository. 
+
+	1. Create an Azure account if you don't already have one using the steps in the next section of this README.
 	2. Create Cognitive Services Keys for:
 		a. Face SDK
 			i. In Azure portal, click + New button
@@ -70,3 +84,31 @@ BikeSharing360 Cognitive Services Kiosk Demo App
 		a. Update the Cognitive Services keys in the App.xaml.cs
 		b. Add a row representing yourself in the constructor of the Data\UserLookupServices.cs class
 Build and run the application
+
+Enjoy!
+
+## How to sign up for Microsoft Azure
+
+You need an Azure account to work with this demo code. You can:
+
+- Open an Azure account for free [Azure subscription](https://azure.com). You get credits that can be used to try out paid Azure services. Even after the credits are used up, you can keep the account and use free Azure services and features, such as the Web Apps feature in Azure App Service.
+- [Activate Visual Studio subscriber benefits](https://www.visualstudio.com/products/visual-studio-dev-essentials-vs). Your Visual Studio subscription gives you credits every month that you can use for paid Azure services.
+- Not a Visual Studio subscriber? Get a $25 monthly Azure credit by joining [Visual Studio Dev Essentials](https://www.visualstudio.com/products/visual-studio-dev-essentials-vs).
+
+## Blogs posts
+
+Here's links to blog posts related to this project:
+
+- Xamarin Blog: [Microsoft Connect(); 2016 Recap](https://blog.xamarin.com/microsoft-connect-2016-recap/)
+- The Visual Studio Blog: [Announcing the new Visual Studio for Mac](https://blogs.msdn.microsoft.com/visualstudio/2016/11/16/visual-studio-for-mac/)
+- The Visual Studio Blog: [Introducing Visual Studio Mobile Center (Preview)](https://blogs.msdn.microsoft.com/visualstudio/2016/11/16/visual-studio-mobile-center/)
+- The Visual Studio Blog: [Visual Studio 2017 Release Candidate](https://blogs.msdn.microsoft.com/visualstudio/2016/11/16/visual-studio-2017-rc/)
+
+## Clean and Rebuild
+If you see build issues when pulling updates from the repo, try cleaning and rebuilding the solution.
+
+## Copyright and license
+* Code and documentation copyright 2016 Microsoft Corp. Code released under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Code of Conduct 
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
