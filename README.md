@@ -1,4 +1,4 @@
-# BikeSharing360 Modern Kiosk with Cognitive Services
+﻿# BikeSharing360 Modern Kiosk with Cognitive Services
 
 During Connect(); //2016 we showcased many technologies available to you as a developer across Azure, Office, Windows, Visual Studio and Visual Studio Team Services. We’ve also heard from you that you love to have real-world applications through which you can directly experience what’s possible using those technologies. This year, then, we built out a full bikerider scenario for our Connect(); //2016 demos and are delighted to share all the source code with you.
 
@@ -12,6 +12,11 @@ This kiosk app leveraged Cognitive Services to enable customers to interact with
 * Windows 10
 * [Visual Studio __2015__](https://www.visualstudio.com/en-us/products/vs-2015-product-editions.aspx) Update 3 (14.0 or higher) to compile C# 6 language features (or Visual Studio MacOS)
 * Microsoft Azure subscription
+
+
+## Screens
+<img src="Images/Screenshot1.png" alt="Screenshot 1" />
+<img src="Images/Screenshot2.png" alt="Screenshot 2" />
 
 ## Setup
 
