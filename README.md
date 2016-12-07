@@ -89,7 +89,7 @@ This kiosk app leveraged Cognitive Services to enable customers to interact with
 Build and run the application
 
 ## Running the demo
-You can find the steps to run through the demo script by clicking <a href="/Documents/Script.docx">HERE</a>.
+You can find the steps to run through the demo script found in the **Documents** folder of this repo.
 
 Enjoy!
 
