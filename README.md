@@ -13,13 +13,11 @@ This kiosk app leveraged Cognitive Services to enable customers to interact with
 * [Visual Studio __2015__](https://www.visualstudio.com/en-us/products/vs-2015-product-editions.aspx) Update 3 (14.0 or higher) to compile C# 6 language features (or Visual Studio MacOS)
 * Microsoft Azure subscription
 
-
 ## Screens
 <img src="Images/Screenshot1.png" alt="Screenshot 1" />
 <img src="Images/Screenshot2.png" alt="Screenshot 2" />
 
 ## Setup
-
 **Download** or clone the repository. 
 
 	1. Create an Azure account if you don't already have one using the steps in the next section of this README.
@@ -89,6 +87,9 @@ This kiosk app leveraged Cognitive Services to enable customers to interact with
 		a. Update the Cognitive Services keys in the App.xaml.cs
 		b. Add a row representing yourself in the constructor of the Data\UserLookupServices.cs class
 Build and run the application
+
+## Running the demo
+You can find the steps to run through the demo script by clicking <a href="Documents/Script.docx">HERE</a>.
 
 Enjoy!
 
