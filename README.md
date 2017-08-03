@@ -1,4 +1,4 @@
-#BikeSharing360
+# BikeSharing360
 
 During our Connect(); event this year we presented 15 demos in Scott Guthrie’s and Scott Hanselman’s keynotes. If you missed the keynotes, you can watch the recording in [Channel 9](https://channel9.msdn.com/Events/Connect/2016/Keynotes-Scott-Guthrie-and-Scott-Hanselman).
 
@@ -8,23 +8,23 @@ BikeSharing360 is a fictitious example of a smart bike sharing system with 10,00
 
 In this demo scenario, we built several apps for both the enterprise and the consumer (bike riders). You can find all other BikeSharing360 repos in the following locations:
 
-*[Mobile Apps](https://github.com/Microsoft/BikeSharing360_MobileApps)
-*[Backend Services](https://github.com/Microsoft/BikeSharing360_BackendServices)
-*[Websites](https://github.com/Microsoft/BikeSharing360_Websites)
-*[Single Container Apps](https://github.com/Microsoft/BikeSharing360_SingleContainer)
-*[Multi Container Apps](https://github.com/Microsoft/BikeSharing360_MultiContainer)
-*[Cognitive Services Kiosk App](https://github.com/Microsoft/BikeSharing360_CognitiveServicesKioskApp)
-*[Azure Bot App](https://github.com/Microsoft/BikeSharing360_BotApps)
+* [Mobile Apps](https://github.com/Microsoft/BikeSharing360_MobileApps)
+* [Backend Services](https://github.com/Microsoft/BikeSharing360_BackendServices)
+* [Websites](https://github.com/Microsoft/BikeSharing360_Websites)
+* [Single Container Apps](https://github.com/Microsoft/BikeSharing360_SingleContainer)
+* [Multi Container Apps](https://github.com/Microsoft/BikeSharing360_MultiContainer)
+* [Cognitive Services Kiosk App](https://github.com/Microsoft/BikeSharing360_CognitiveServicesKioskApp)
+* [Azure Bot App](https://github.com/Microsoft/BikeSharing360_BotApps)
 
 # BikeSharing360 Modern Kiosk with Cognitive Services
 
-During Connect(); //2016 we showcased many technologies available to you as a developer across Azure, Office, Windows, Visual Studio and Visual Studio Team Services. We’ve also heard from you that you love to have real-world applications through which you can directly experience what’s possible using those technologies. This year, then, we built out a full bikerider scenario for our Connect(); //2016 demos and are delighted to share all the source code with you.
+During Connect(); 2016 we showcased many technologies available to you as a developer across Azure, Office, Windows, Visual Studio and Visual Studio Team Services. We’ve also heard from you that you love to have real-world applications through which you can directly experience what’s possible using those technologies. This year, then, we built out a full bikerider scenario for our Connect(); 2016 demos and are delighted to share all the source code with you.
 
 **Note:** This document is about the **Kiosk app** only.
 
 This kiosk app leveraged Cognitive Services to enable customers to interact with the kiosk through face detection, face recognition, voice verification, text-to-speech, speech-to-text, language understanding, and emotion detection, which allowed them to complete a transaction without the need for traditional input or touch or even pulling out your wallet.  
 
-<img src="Images/hero_image.png" alt="BikeRider" Width="800" />
+![BikeRider](Images/hero_image.png)
 
 ## Requirements
 * Windows 10
@@ -32,78 +32,82 @@ This kiosk app leveraged Cognitive Services to enable customers to interact with
 * Microsoft Azure subscription
 
 ## Screens
-<img src="Images/Screenshot1.png" alt="Screenshot 1" />
-<img src="Images/Screenshot2.png" alt="Screenshot 2" />
+![Screenshot 1](Images/Screenshot1.png)
+![Screenshot 2](Images/Screenshot2.png)
 
 ## Setup
-**Download** or clone the repository. 
+Download or clone the repository. 
 
-	1. Create an Azure account if you don't already have one using the steps in the next section of this README.
-	2. Create Cognitive Services Keys for:
-		a. Face SDK
-			i. In Azure portal, click + New button
-			ii. Type "Cognitive Service APIs" in the search box
-			iii. Click  Cognitive Service APIs (preview) in search result
-			iv. Click Create button
-			v. Give a unique name to the Account Name field (for example, "FaceApiAccount")
-			vi. Click Api type to configure required settings
-			vii. Pick Face API (preview) from the list of services
-			viii. Click Pricing tier to select a proper pricing tier
-			ix. Set proper Resource Group option
-			x. Click Legal terms to review and agree on the terms
-			xi. Click Create button
-			xii. Shortly you should receive a notification if the deployment succeeds. Click on the notification should bring you to the service account you just created
-			xiii. Click on Keys and take a note of either one of the two keys.
-		b. Voice Verification SDK
-			i. Similar to how you create the Face Api service, but this time, pick Speacker Recognition APIs (preview) from the list of services.
-			ii. Also take note of either one of the two keys.  We will need it in the later steps.
-	3. Set up a LUIS model 
-		a. See instructions on setting up the LUIS model from the BOT sample project found here: https://github.com/Microsoft/BikeSharing360_BotApps/blob/master/README.md
-	4. Create a face verification profile for yourself
-		a. Clone the repository https://github.com/Microsoft/Cognitive-Face-Windows
-		b. Open Sample-WPF\Controls\FaceIdentificationPage.xaml.cs, change Line 67
-		
-		        public static readonly string SampleGroupName = Guid.NewGuid().ToString();
-		
-		to have a more user-friendly name, instead of a GUID
-		
-		c. Follow the instruction in README.md to build the sample
-		d. Run the sample
-		e. Click on Subscription Key Management tab, paste in the Face API key you saved earlier
-		f. The sample comes with a set of training data under Data/PersonGroup folder in the repository, create a new folder (with a name of your choice), and copy one or more of your profile images into that folder.  Frontal or near-frontal face works the best. Delete other folders in the example data set to reduce the api calls to your Face Api service
-		g. Click on Face Identification tab
-		h. Click Load PersonGroup button
-		i. Select the Data/PersonGroup folder on your local disk
-		j. If any of your profile images contains a valid face, the image will show up.  It means your Face profile is registered successfully.
-		k. The status pane should also contain the face profile id for each person, take note of your face profile id. Example log:
-		
+1. Create an Azure account if you don't already have one using the steps in the next section of this README.
+1. Create a Cognitive Service Key for the Face SDK:
+	1. In Azure portal, click + New button
+	1. Type "Cognitive Service APIs" in the search box
+	1. Click  Cognitive Service APIs (preview) in search result
+	1. Click Create button
+	1. Give a unique name to the Account Name field (for example, "FaceApiAccount")
+	1. Click Api type to configure required settings
+	1. Pick Face API (preview) from the list of services
+	1. Click Pricing tier to select a proper pricing tier
+	1. Set proper Resource Group option
+	1. Click Legal terms to review and agree on the terms
+	1. Click Create button
+	1. Shortly you should receive a notification if the deployment succeeds. Click on the notification should bring you to the service account you just created
+	1. Click on Keys and take a note of either one of the two keys.
+1. Create a Cognitive Service Key for the Voice Verification SDK
+	1. Similar to how you create the Face Api service, but this time, pick Speacker Recognition APIs (preview) from the list of services.
+	1. Take note of either one of the two keys.  We will need it in the later steps.
+1. Set up a LUIS model using the [instructions on setting up the LUIS model from the BOT sample]( https://github.com/Microsoft/BikeSharing360_BotApps)
+1. Create a face verification profile for yourself
+	1. Clone the repository [https://github.com/Microsoft/Cognitive-Face-Windows](https://github.com/Microsoft/Cognitive-Face-Windows)
+	1. Open `Sample-WPF\Controls\FaceIdentificationPage.xaml.cs`, change Line 67 to have a more user-friendly name, instead of a GUID. 
+	
+			public static readonly string SampleGroupName = Guid.NewGuid().ToString();
+	
+	1. Follow the instruction in README.md to build the sample
+	1. Run the sample
+	1. Click on Subscription Key Management tab, paste in the Face API key you saved earlier
+	1. The sample comes with a set of training data under Data/PersonGroup folder in the repository, create a new folder (with a name of your choice), and copy one or more of your profile images into that folder.  Frontal or near-frontal face works the best. Delete other folders in the example data set to reduce the api calls to your Face Api service
+	1. Click on Face Identification tab
+	1. Click Load PersonGroup button
+	1. Select the Data/PersonGroup folder on your local disk
+	1. If any of your profile images contains a valid face, the image will show up.  It means your Face profile is registered successfully.
+	1. The status pane should also contain the face profile id for each person, take note of your face profile id. 
+	
+		Example log:
+	
+		```
 		[12:22:42.547589]: Response: Success. Person "Family1-Dad" (PersonID:9acfe7e1-6196-4230-aed8-a0b172ee2298) created
 		[12:22:43.913174]: Request: Creating person "Family1-Daughter"
 		[12:22:44.228009]: Response: Success. Person "Family1-Daughter" (PersonID:c32d0abe-ef03-40fc-b50d-66c989a9957e) created
-		
-		l. You need the group name, and the Face profile Id  
-		
-	5. Create a voice verification profile for yourself
-		a. Clone the repository https://github.com/Microsoft/Cognitive-SpeakerRecognition-Windows
-		b. Follow the instruction in README.md to build Verification/SPIDVerficationAPI_WPF_Sample.sln
-		c. Run the sample
-		d. Paste your Speacker Recognition account key in the Subscription Key Management tab
-		e. Click on Scenario 1: Make a new Enrollment tab
-		f. Pick one phrases from the ten available phrases
-		g. Click Record button then start speaking your chosen phrase via microphone. Click Stop Recording after wards, the status pane should show your phrase if everything works as expected
-		
+		```
+	
+	1. You need the group name, and the Face profile Id  
+	
+1. Create a voice verification profile for yourself
+	1. Clone the repository https://github.com/Microsoft/Cognitive-SpeakerRecognition-Windows
+	1. Follow the instruction in README.md to build Verification/SPIDVerficationAPI_WPF_Sample.sln
+	1. Run the sample
+	1. Paste your Speacker Recognition account key in the Subscription Key Management tab
+	1. Click on Scenario 1: Make a new Enrollment tab
+	1. Pick one phrases from the ten available phrases
+	1. Click Record button then start speaking your chosen phrase via microphone. Click Stop Recording after wards, the status pane should show your phrase if everything works as expected:
+	
+		```
 		[12:02:22.651469]: Your phrase: <XXX XXX X XXX>
-		
-		h. The sample code doesn't show you the Speaker profile id in the status pane.  To work around it, you can click Reset Profile button as soon as it's enabled, the application  will show a message similar to the below in the status pane. Take note of this id.
-		
+		```
+
+	1. The sample code doesn't show you the Speaker profile id in the status pane.  To work around it, you can click Reset Profile button as soon as it's enabled, the application  will show a message similar to the below in the status pane. Take note of this id.
+	
+		```
 		[12:07:03.877365]: Resetting profile: 54aa9c1d-a815-44b6-9696-26be765dd840
-		
-		i. Repeat the recoding/stop recording using your chosen phrase until Remaining Enrollments reaches 0.
-		j. You need the Speaker profile Id.
-		
-	6. Open the BikeSharing.Clients.CogServicesKiosk.sln solution
-		a. Update the Cognitive Services keys in the App.xaml.cs
-		b. Add a row representing yourself in the constructor of the Data\UserLookupServices.cs class
+		```
+
+	1. Repeat the recoding/stop recording using your chosen phrase until Remaining Enrollments reaches 0.
+	1. You need the Speaker profile Id.
+	
+6. Open the BikeSharing.Clients.CogServicesKiosk.sln solution
+	a. Update the Cognitive Services keys in the App.xaml.cs
+	b. Add a row representing yourself in the constructor of the Data\UserLookupServices.cs class
 Build and run the application
 
 ## Running the demo
